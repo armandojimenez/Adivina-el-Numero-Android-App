@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name" translatable="false">Adivina el Número </string>
+    <string name="action_settings" translatable="false">Settings</string>
+    <string name="sub_title_1_al_10" translatable="false">Ingresa un número del 1 al 100.</string>
+    <string name="button_again_title" translatable="false">¿Otra vez?</string>
+    <string name="button_guess_title" translatable="false">¡Adivina!</string>
+    <string name="tienes_tries">Tienes 10 intentos disponibles.</string>
+</resources>
