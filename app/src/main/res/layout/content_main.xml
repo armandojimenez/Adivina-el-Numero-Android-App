@@ -15,18 +15,18 @@
         android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView4"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="11dp"
         android:fontFamily="casual"
         android:gravity="center_vertical"
-        android:text="@string/sub_title_1_al_10"
+        android:text="@string/subtitle1al10"
         android:textAlignment="center"
         android:textColor="?android:attr/textColorSecondary"
         android:textSize="18sp"
         android:textStyle="bold"
         tools:layout_editor_absoluteX="55dp"
-        tools:layout_editor_absoluteY="76dp"
-        android:layout_below="@+id/imageView4"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="11dp"/>
+        tools:layout_editor_absoluteY="76dp"/>
 
     <Button
         android:id="@+id/btnGuess"
@@ -56,13 +56,14 @@
         android:ems="10"
         android:fontFamily="casual"
         android:inputType="number"
+        android:maxLines="1"
         android:selectAllOnFocus="false"
         android:textAlignment="center"
         android:textColor="@android:color/holo_blue_dark"
+        android:textSize="18sp"
         android:textStyle="bold"
         tools:layout_editor_absoluteX="149dp"
-        tools:layout_editor_absoluteY="133dp"
-        android:maxLines="1"/>
+        tools:layout_editor_absoluteY="133dp"/>
 
     <TextView
         android:id="@+id/lblIntentos"
@@ -91,7 +92,7 @@
         android:layout_below="@+id/btnGuess"
         android:layout_marginTop="16dp"
         android:fontFamily="casual"
-        android:text="¡Buena Suerte!"
+        android:text="@string/buenaSuerte"
         android:textAlignment="center"
         android:textColor="@android:color/background_dark"
         android:textSize="18sp"
@@ -119,7 +120,8 @@
         android:layout_alignTop="@+id/lblOutput"
         android:layout_marginTop="13dp"
         android:visibility="invisible"
-        app:srcCompat="@drawable/confetti"/>
+        app:srcCompat="@drawable/confetti"
+        tools:ignore="ContentDescription"/>
 
     <ImageView
         android:id="@+id/imageView5"
@@ -169,7 +171,8 @@
         android:layout_toEndOf="@+id/btnGuess"
         android:visibility="invisible"
         app:srcCompat="@drawable/errorstop"
-        tools:ignore="ContentDescription"/>
+        tools:ignore="ContentDescription"
+        android:layout_toRightOf="@+id/btnGuess"/>
 
     <ImageView
         android:id="@+id/sign1"
@@ -181,7 +184,8 @@
         android:layout_below="@+id/textView7"
         android:layout_toRightOf="@+id/btnGuess"
         android:layout_toEndOf="@+id/btnGuess"
-        android:layout_marginTop="7dp"/>
+        android:layout_marginTop="7dp"
+        tools:ignore="ContentDescription"/>
 
     <ImageView
         android:id="@+id/sign2"
@@ -193,7 +197,8 @@
         android:layout_toStartOf="@+id/btnGuess"
         android:layout_marginRight="15dp"
         android:layout_marginEnd="15dp"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="20dp"
+        tools:ignore="ContentDescription"/>
 
     <ImageView
         android:id="@+id/confettitop"
@@ -203,6 +208,18 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:visibility="invisible"
-        app:srcCompat="@drawable/confetti3"/>
+        app:srcCompat="@drawable/confetti3"
+        tools:ignore="ContentDescription"/>
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-3802992379133652/1039504923">
+    </com.google.android.gms.ads.AdView>
 
 </RelativeLayout>

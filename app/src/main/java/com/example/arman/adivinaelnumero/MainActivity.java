@@ -25,6 +25,9 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.android.gms.ads.MobileAds;
+
+
 
 public class MainActivity extends AppCompatActivity {
     //declare variables for MainActivity
@@ -64,30 +67,30 @@ public class MainActivity extends AppCompatActivity {
 
             //message with number of tries left
             this.counter++; //This will increase on each attempt
-            lblIntentos.setText("!Sigue adivinando! Tienes " + (limit - counter) + " intentos disponibles.");
+            lblIntentos.setText(getString(R.string.sigueAdivinando) + (limit - counter) + getString(R.string.intentosDisponibles));
 
 
             if (guess > theNumber) { //too high
-                message = guess + " fue muy alto.";
+                message = guess + getString(R.string.muyAlto);
                 lblOutput.setText(message);
 
             } else if (guess < theNumber) { //too low
-                message = guess + " fue muy bajo.";
+                message = guess + getString(R.string.muyBajo);
                 lblOutput.setText(message);
 
             } else if (guess == theNumber) { // user got it right
                 lblOutput.setTextColor(Color.YELLOW); // text color set to yellow
-                message = guess + " es el número correcto. ¡Ganaste! ¡Juega de nuevo!";
+                message = guess + getString(R.string.ganasteJuegaDeNuevo);
                 cheerSound.start(); //cheer sound
                 winPlayAgain.start(); //win voice sound
 
                 lblOutput.setText(message);
                 if (counter == 1) { //if user got it on first try
-                    lblIntentos.setText("Lo lograste en un solo intento. ¡Que Suerte!");
+                    lblIntentos.setText(R.string.ganasteUnIntento);
                 } else if (counter > 1 && counter < 6) {  //from 2 to 5
-                    lblIntentos.setText("Lo lograste en " + counter + " intentos. ¡Increíble!");
+                    lblIntentos.setText(getString(R.string.lograste) + counter + getString(R.string.intentosIncreible));
                 } else {
-                    lblIntentos.setText("Lo lograste en " + counter + " intentos. ¡Sigue practicando!");
+                    lblIntentos.setText(getString(R.string.lograste) + counter + getString(R.string.intentosSigue));
                 }
 
 
@@ -107,7 +110,7 @@ public class MainActivity extends AppCompatActivity {
                 losePlayAgain.start(); //lose voice sound
                 lblIntentos.setTextColor(Color.RED); //text color set to red
 
-                lblIntentos.setText("Perdiste... el número era:  " + theNumber + ". ¡Juega de nuevo!");
+                lblIntentos.setText(getString(R.string.youLost) + theNumber + getString(R.string.playAgain));
                 imageView6.setVisibility(View.VISIBLE); //lose image set to visible
                 txtGuess.setEnabled(false); //txt Guess disables
                 swapButtons(); //swap buttons
@@ -117,7 +120,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         } catch (Exception e) { //if the try catch any exceptions
-            message = "Por favor ingrese un número entero en el cuadro.";
+            message = getString(R.string.errorMessage);
             lblOutput.setText(message);
             imageView7.setVisibility(View.VISIBLE); //error image set to visible
         } finally { //highlight the txt Guess field and select all for a better UX
@@ -168,6 +171,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        MobileAds.initialize(this, "ca-app-pub-3802992379133652~8841973325");
 
 
         //click sound creation
@@ -209,8 +213,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                lblOutput.setText("¡Buena Suerte!");
-                lblIntentos.setText("Tienes 10 intentos disponibles.");
+                lblOutput.setText(R.string.buenaSuerte);
+                lblIntentos.setText(getString(R.string.tienes_tries));
                 adivinaElNumero.start();
 
                 newGame();

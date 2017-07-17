@@ -1,4 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="action_settings"></string>
+    <string name="buenaSuerte">Good luck!</string>
+    <string name="button_again_title">Play again?</string>
+    <string name="button_guess_title">Guess!</string>
+    <string name="errorMessage">Please enter a whole numer above.</string>
+    <string name="ganasteJuegaDeNuevo">" is the correct number! You win! Play again!"</string>
+    <string name="lograste">"You did it in "</string>
+    <string name="youLost">"You lost… the number was: "</string>
+    <string name="ganasteUnIntento">You did it in one try! how awesome!</string>
+    <string name="intentosDisponibles">" tries available."</string>
+    <string name="playAgain">. Play again!</string>
+    <string name="tienes_tries">You have 10 tries available.</string>
+    <string name="sigueAdivinando">" Keep guessing! You have "</string>
+    <string name="muyAlto">" was too high."</string>
+    <string name="muyBajo">" was too low."</string>
+    <string name="intentosSigue">" tries. Keep practicing!"</string>
+    <string name="intentosIncreible">" tries. Incredible!"</string>
+    <string name="app_name">Guess the number!</string>
+    <string name="adivinaAppName">Guess!</string>
+    <string name="adivinaBy">Guess! by AJ</string>
+    <string name="subtitle1al10">Enter a number between 1 to 100.</string>
 </resources>

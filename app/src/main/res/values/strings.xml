@@ -1,8 +1,23 @@
 <resources>
-    <string name="app_name" translatable="false">Adivina el Número </string>
-    <string name="action_settings" translatable="false">Settings</string>
-    <string name="sub_title_1_al_10" translatable="false">Ingresa un número del 1 al 100.</string>
-    <string name="button_again_title" translatable="false">¿Otra vez?</string>
-    <string name="button_guess_title" translatable="false">¡Adivina!</string>
+    <string name="action_settings">Settings</string>
+    <string name="subtitle1al10">Ingresa un número del 1 al 100.</string>
+    <string name="button_again_title">¿Otra vez?</string>
+    <string name="button_guess_title">¡Adivina!</string>
     <string name="tienes_tries">Tienes 10 intentos disponibles.</string>
+    <string name="youLost">"Perdiste… el número era: "</string>
+    <string name="playAgain">. ¡Juega de nuevo!</string>
+    <string name="muyAlto">" fue muy alto."</string>
+    <string name="muyBajo">" fue muy bajo."</string>
+    <string name="ganasteJuegaDeNuevo">" es el número correcto. ¡Ganaste! ¡Juega de nuevo!"</string>
+    <string name="ganasteUnIntento">Lo lograste en un solo intento. ¡Que Suerte!</string>
+    <string name="lograste">\"Lo lograste en \"</string>
+    <string name="intentosIncreible">\" intentos. ¡Increíble!\"</string>
+    <string name="intentosSigue">\" intentos. ¡Sigue practicando!\"</string>
+    <string name="errorMessage">Por favor ingrese un número entero en el cuadro.</string>
+    <string name="sigueAdivinando">"!Sigue adivinando! Tienes "</string>
+    <string name="intentosDisponibles">" intentos disponibles."</string>
+    <string name="buenaSuerte">¡Buena Suerte!</string>
+    <string name="app_name">¡Adivina el numero!</string>
+    <string name="adivinaAppName">!Adivina!</string>
+    <string name="adivinaBy">!Adivina! por AJ</string>
 </resources>
